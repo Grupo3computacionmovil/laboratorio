@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Lab1UI</string>
+    <string name="Boton">Fecha</string>
+
+        <string-array name="countries_array">
+            <item>Afghanistan</item>
+            <item>Albania</item>
+            <item>Algeria</item>
+            <item>American Samoa</item>
+            <item>Andorra</item>
+            <item>Angola</item>
+            <item>Anguilla</item>
+            <item>Antarctica</item>
+        </string-array>
+
+
+    <string-array name="hobbies_array">
+        <item>Hobbies</item>
+        <item>Patinar</item>
+        <item>Anime</item>
+        <item>Piano</item>
+        <item>Peliculas</item>
+        <item>Estudiar</item>
+        <item>Salir</item>
+        <item>Entrar</item>
+    </string-array>
+
+
+</resources>
