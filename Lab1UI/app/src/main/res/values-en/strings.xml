@@ -1,17 +1,16 @@
 <resources>
     <string name="app_name">Lab1UI</string>
     <string name="Boton">Fecha</string>
-    <string name="Nombre">Nombre</string>
-    <string name="Apellido">Apellido</string>
-    <string name="Fecha">Fecha</string>
-    <string name="País">País</string>
-    <string name="Teléfono">Teléfono</string>
-    <string name="Dirección">Dirección</string>
+    <string name="Nombre">Name</string>
+    <string name="Apellido">Last Name</string>
+    <string name="Fecha">Date</string>
+    <string name="País">Country</string>
+    <string name="Teléfono">Phone</string>
+    <string name="Dirección">Address</string>
     <string name="Email">Email</string>
-    <string name="Favorito">Favorito</string>
-    <string name="No_Favorito">No Favorito</string>
-    <string name="Mostrar">Mostar</string>
-
+    <string name="Favorito">Favorite</string>
+    <string name="No_Favorito">No Favorite</string>
+    <string name="Mostrar">Show</string>
 
 
         <string-array name="countries_array">
@@ -23,18 +22,18 @@
             <item>Angola</item>
             <item>Anguilla</item>
             <item>Antarctica</item>
-	    <item>Colombia</item>
+            <item>Colombia</item>
         </string-array>
 
 
     <string-array name="hobbies_array">
         <item>Hobbies</item>
-        <item>Patinar</item>
+        <item>Skating</item>
         <item>Anime</item>
         <item>Piano</item>
-        <item>Peliculas</item>
-        <item>Estudiar</item>
-        <item>Salir</item>
+        <item>Movies</item>
+        <item>Study</item>
+        <item>Go out</item>
     </string-array>
 
 

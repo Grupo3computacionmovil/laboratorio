@@ -14,10 +14,11 @@ import android.widget.AutoCompleteTextView;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import java.util.Calendar;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements DatePickerDialog.OnDateSetListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,8 +39,26 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public boolean isEmpty(EditText Nombre) {
-        return Nombre.getText().toString().trim().length() == 0;
+    public void onEditSet(View v){
+
+        DialogFragment datePickerFragment = new DatePickerFragment();
+        datePickerFragment.show(getFragmentManager(), "datePicker");
+    }
+
+
+
+    public void onClick(View view){
+        TextView texto = (TextView)findViewById(R.id.Texto);
+        EditText nombre = (EditText)findViewById(R.id.Nombre);
+        EditText apellido = (EditText)findViewById(R.id.Apellido);
+        texto.setText(new StringBuilder().append(nombre.getText()).append("\n").append(apellido.getText()));
+
+    }
+
+    @Override
+    public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+        EditText et  = (EditText)findViewById(R.id.Fecha);
+        et.setText(new StringBuilder().append(year).append(monthOfYear).append(dayOfMonth));
     }
 
     public class SpinnerActivity extends Activity implements AdapterView.OnItemSelectedListener {
