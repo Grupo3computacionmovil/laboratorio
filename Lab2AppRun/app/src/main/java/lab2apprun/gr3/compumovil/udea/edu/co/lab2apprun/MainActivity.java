@@ -1,6 +1,7 @@
 package lab2apprun.gr3.compumovil.udea.edu.co.lab2apprun;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -30,6 +31,21 @@ public class MainActivity extends AppCompatActivity {
         values.put(StatusContract.Column.EMAIL, "Correo");
         db.insertWithOnConflict(StatusContract.TABLE, null, values,
                 SQLiteDatabase.CONFLICT_IGNORE); //Se guarda la fila en la base de datos
+    }
+
+    public void regis (){
+        Intent intento =new Intent (this, Registro.class);
+        this.startActivity(intento);
+
+    }
+
+    private void Login()
+    {
+
+        user = (EditText) findViewById(R.id.UserTextReg);
+        pass = (EditText) findViewById(R.id.PassTextReg);
+        String passTxt = PassViewReg.getText().toString();
+        String usrTxt = UserTextReg.getText().toString();
     }
 
 
