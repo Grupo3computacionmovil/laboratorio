@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="lab2apprun.gr3.compumovil.udea.edu.co.lab2apprun.Session">
+
+
+    <Button
+        android:id="@+id/SignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/CerrarSesion"
+        android:onClick="LogOut"
+        android:layout_below="@+id/PassText"
+        android:layout_alignRight="@+id/PassText"
+        android:layout_alignEnd="@+id/PassText"
+        android:layout_marginTop="67dp" />
+
+
+
+
+
+</RelativeLayout>

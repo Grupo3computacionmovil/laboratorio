@@ -13,52 +13,44 @@ public class MainActivity extends AppCompatActivity {
     private EditText user;
     private EditText pass;
     private EditText email;
+    public static final String KEY1 = "datakey1";
+    public static final String KEY2 = "datakey1";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        user = (EditText) findViewById(R.id.UserTextReg);
-        pass = (EditText) findViewById(R.id.PassTextReg);
-        email = (EditText) findViewById(R.id.EmailTextReg);
 
+        user = (EditText) findViewById(R.id.UserText);
+        pass = (EditText) findViewById(R.id.PassText);
 
-        DbHelper dbHelper = new DbHelper(this); //Instancia de DbHelper
-        SQLiteDatabase db = dbHelper.getWritableDatabase(); //Obtener instancia de la BD
-        ContentValues values = new ContentValues();
-        values.put(StatusContract.Column.USER,"student");
-        values.put(StatusContract.Column.PASS,"Contrasena");
-        values.put(StatusContract.Column.EMAIL, "Correo");
-        db.insertWithOnConflict(StatusContract.TABLE, null, values,
-                SQLiteDatabase.CONFLICT_IGNORE); //Se guarda la fila en la base de datos
-    }
+        Intent intent = getIntent();
+        String usuario = intent.getStringExtra(Registro.KEY01);
+        user.setText(usuario);
 
-    public void regis (){
-        Intent intento =new Intent (this, Registro.class);
-        this.startActivity(intento);
+        String contrasena = intent.getStringExtra(Registro.KEY02);
+        pass.setText(contrasena);
 
     }
 
-    private void Login()
-    {
+    public void Sing_In (View v){  // llama el activity Registro
+        Intent singIn =new Intent (this, Registro.class);
+        this.startActivity(singIn);
+    }
 
-        user = (EditText) findViewById(R.id.UserTextReg);
-        pass = (EditText) findViewById(R.id.PassTextReg);
-        String passTxt = PassViewReg.getText().toString();
-        String usrTxt = UserTextReg.getText().toString();
+    public void Start_Session (View v){  //llama el activity Session
+        Intent sesion = new Intent (this, Session.class);
+        this.startActivity(sesion);
     }
 
 
-    public void Registro (View V)
-    {
-        DbHelper dbHelper = new DbHelper(this); //Instancia de DbHelper
-        SQLiteDatabase db = dbHelper.getWritableDatabase(); //Obtener instancia de la BD
-        ContentValues values = new ContentValues();
-        values.put(StatusContract.Column.USER, user.getText().toString());
-        values.put(StatusContract.Column.PASS, pass.getText().toString());
-        values.put(StatusContract.Column.EMAIL, email.getText().toString());
-        db.insertWithOnConflict(StatusContract.TABLE, null, values,
-                SQLiteDatabase.CONFLICT_IGNORE); //Se guarda la fila en la base de datos
-    }
+
+
+
+
+
+
+
 
 }

@@ -1,0 +1,15 @@
+<resources>
+
+    <string name="app_name">Lab2AppRun</string>
+    <string name="title_activity_registro">Sing In</string>
+
+    <string name="Usuario">User</string>
+    <string name="contraseña">Password</string>
+    <string name="Email">Email</string>
+
+    <string name="iniciarSesion">Start Session</string>
+    <string name="registrarse">Sing In</string>
+    <string name="Cancelar">Cancel</string>
+    <string name="CerrarSesion">Log out</string>
+
+</resources>

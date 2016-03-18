@@ -1,7 +1,15 @@
 <resources>
-    <string name="app_name">Lab2AppRun</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_name">Lab2AppRun</string>
     <string name="title_activity_registro">Registro</string>
+
+    <string name="Usuario">Usuario</string>
+    <string name="contraseña">Contraseña</string>
+    <string name="Email">Email</string>
+
+    <string name="iniciarSesion">Iniciar Sesión</string>
+    <string name="registrarse">Registrarse</string>
+    <string name="Cancelar">Cancelar</string>
+    <string name="CerrarSesion">Cerrar Sesión</string>
+
 </resources>

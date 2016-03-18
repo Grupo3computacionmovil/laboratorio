@@ -13,7 +13,7 @@
         android:id="@+id/UserView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="User"
+        android:text="@string/Usuario"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:layout_marginTop="28dp"
         android:layout_alignParentTop="true"
@@ -24,7 +24,7 @@
         android:id="@+id/PassView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pass"
+        android:text="@string/contraseña"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:layout_below="@+id/UserText"
         android:layout_alignParentLeft="true"
@@ -55,18 +55,20 @@
         android:id="@+id/Login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"
-        android:layout_alignBottom="@+id/UserText"
-        android:layout_alignLeft="@+id/SignIn"
-        android:layout_alignStart="@+id/SignIn" />
+        android:text="@string/iniciarSesion"
+        android:onClick="Start_Session"
+        android:layout_alignTop="@+id/SignIn"
+        android:layout_toLeftOf="@+id/SignIn"
+        android:layout_toStartOf="@+id/SignIn" />
 
     <Button
         android:id="@+id/SignIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sign In"
-        android:onClick="login"
-        android:layout_alignTop="@+id/PassText"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:text="@string/registrarse"
+        android:onClick="Sing_In"
+        android:layout_below="@+id/PassText"
+        android:layout_alignRight="@+id/PassText"
+        android:layout_alignEnd="@+id/PassText"
+        android:layout_marginTop="67dp" />
 </RelativeLayout>
